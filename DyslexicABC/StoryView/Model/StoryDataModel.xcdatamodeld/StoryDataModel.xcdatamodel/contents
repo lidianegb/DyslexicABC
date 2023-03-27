@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="StoryDataModel" representedClassName="StoryDataModel" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="times" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataTimesModel" inverseName="dataModel" inverseEntity="StoryDataTimesModel"/>
+        <relationship name="words" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataWordsModel" inverseName="dataModel" inverseEntity="StoryDataWordsModel"/>
+    </entity>
+    <entity name="StoryDataTimesModel" representedClassName="StoryDataTimesModel" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="timestamp" attributeType="String"/>
+        <attribute name="word" attributeType="String"/>
+        <relationship name="dataModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryDataModel" inverseName="times" inverseEntity="StoryDataModel"/>
+    </entity>
+    <entity name="StoryDataWordsModel" representedClassName="StoryDataWordsModel" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="syllables" attributeType="String"/>
+        <attribute name="word" attributeType="String"/>
+        <relationship name="dataModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryDataModel" inverseName="words" inverseEntity="StoryDataModel"/>
+    </entity>
+</model>

@@ -1,0 +1,830 @@
+{
+    "titulo": "A estrelinha do mar",
+    "autor": "Marisa Monte",
+    "imagem": "ESTRELA-MAR",
+    "texto": "Os peixes do mar admiravam a beleza da estrelinha. Sempre que a viam, desfaziam-se em mesuras e cortesias dirigidas a ela. Contudo, a estrelinha sentia-se triste. \n\nQuando subia à superfície do mar e contemplava as estrelas do céu, desejava ardentemente ser uma delas, e até se esquecia de como ela própria era bela. \n\n-Estrelinha, você não tem nada a invejar em suas irmãs do céu, dizia-lhe um peixe espada. Sua beleza é tão grande quanto a delas. \n\nEmbora estrelinha agradecesse o elogio, continuava imersa em sua tristeza e na contemplação do céu. \n\nUm dia, estrelinha sonhou que era uma estrela do universo. Via suas irmãs longe, muito longe, e, embora tentasse falar com elas, sabia que a distância a impedia. Por isso, irradiava um brilho intenso, pois a luz era a única maneira de se comunicar com suas irmãs. \n\nQuando a estrelinha despertou, ela compreendeu o significado de seu sonho. \n\nNingúem pode sentir-se feliz enquanto invejar as qualidades dos outros. É melhor valorizar e desenvolver as nossas próprias qualidades, sem querer imitar a ningúem. Diante de Deus, somos todos especiais, ele nos criou únicos, com diferentes qualidades.",
+    "tempos": [
+        {
+            "palavra": "Os",
+            "timestamp": "0.18"
+        },
+        {
+            "palavra": "peixes",
+            "timestamp": "0.46"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "0.9"
+        },
+        {
+            "palavra": "mar",
+            "timestamp": "1.01"
+        },
+        {
+            "palavra": "admiravam",
+            "timestamp": "1.5"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "1.9"
+        },
+        {
+            "palavra": "beleza",
+            "timestamp": "2.33"
+        },
+        {
+            "palavra": "da",
+            "timestamp": "2.91"
+        },
+        {
+            "palavra": "estrelinha",
+            "timestamp": "3.02"
+        },
+        {
+            "palavra": "sempre",
+            "timestamp": "4.14"
+        },
+        {
+            "palavra": "que",
+            "timestamp": "4.58"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "4.62"
+        },
+        {
+            "palavra": "viam",
+            "timestamp": "4.7"
+        },
+        {
+            "palavra": "desfaziam",
+            "timestamp": "5.62"
+        },
+        {
+            "palavra": "em",
+            "timestamp": "6.48"
+        },
+        {
+            "palavra": "mesuras",
+            "timestamp": "6.68"
+        },
+        {
+            "palavra": "e",
+            "timestamp": "7.36"
+        },
+        {
+            "palavra": "cortesias",
+            "timestamp": "7.42"
+        },
+        {
+            "palavra": "dirigidas",
+            "timestamp": "8.14"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "8.8"
+        },
+        {
+            "palavra": "ela",
+            "timestamp": "8.86"
+        },
+        {
+            "palavra": "contudo",
+            "timestamp": "9.52"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "10.58"
+        },
+        {
+            "palavra": "estrelinha",
+            "timestamp": "10.74"
+        },
+        {
+            "palavra": "sentia-se",
+            "timestamp": "11.54"
+        },
+        {
+            "palavra": "triste",
+            "timestamp": "12.32"
+        },
+        {
+            "palavra": "quando",
+            "timestamp": "13.36"
+        },
+        {
+            "palavra": "subia",
+            "timestamp": "13.64"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "14.0"
+        },
+        {
+            "palavra": "superfÃ­cie",
+            "timestamp": "14.06"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "14.8"
+        },
+        {
+            "palavra": "mar",
+            "timestamp": "14.92"
+        },
+        {
+            "palavra": "e",
+            "timestamp": "15.62"
+        },
+        {
+            "palavra": "contemplava",
+            "timestamp": "15.76"
+        },
+        {
+            "palavra": "as",
+            "timestamp": "16.41"
+        },
+        {
+            "palavra": "estrelas",
+            "timestamp": "16.54"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "17.12"
+        },
+        {
+            "palavra": "cÃ©u",
+            "timestamp": "17.24"
+        },
+        {
+            "palavra": "desejava",
+            "timestamp": "18.04"
+        },
+        {
+            "palavra": "ardentemente",
+            "timestamp": "18.76"
+        },
+        {
+            "palavra": "ser",
+            "timestamp": "19.7"
+        },
+        {
+            "palavra": "uma",
+            "timestamp": "19.94"
+        },
+        {
+            "palavra": "delas",
+            "timestamp": "20.14"
+        },
+        {
+            "palavra": "e",
+            "timestamp": "20.96"
+        },
+        {
+            "palavra": "até",
+            "timestamp": "21.12"
+        },
+        {
+            "palavra": "se",
+            "timestamp": "21.3"
+        },
+        {
+            "palavra": "esquecia",
+            "timestamp": "21.46"
+        },
+        {
+            "palavra": "de",
+            "timestamp": "22.14"
+        },
+        {
+            "palavra": "como",
+            "timestamp": "22.28"
+        },
+        {
+            "palavra": "ela",
+            "timestamp": "22.58"
+        },
+        {
+            "palavra": "própria",
+            "timestamp": "22.84"
+        },
+        {
+            "palavra": "era",
+            "timestamp": "23.43"
+        },
+        {
+            "palavra": "bela",
+            "timestamp": "23.76"
+        },
+        {
+            "palavra": "estrelinha",
+            "timestamp": "25.68"
+        },
+        {
+            "palavra": "vocÃª",
+            "timestamp": "27.0"
+        },
+        {
+            "palavra": "nÃ£o",
+            "timestamp": "27.38"
+        },
+        {
+            "palavra": "tem",
+            "timestamp": "27.58"
+        },
+        {
+            "palavra": "nada",
+            "timestamp": "27.78"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "28.34"
+        },
+        {
+            "palavra": "invejar",
+            "timestamp": "28.58"
+        },
+        {
+            "palavra": "em",
+            "timestamp": "29.2"
+        },
+        {
+            "palavra": "suas",
+            "timestamp": "29.36"
+        },
+        {
+            "palavra": "irmÃ£s",
+            "timestamp": "29.7"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "30.04"
+        },
+        {
+            "palavra": "cÃ©u",
+            "timestamp": "30.16"
+        },
+        {
+            "palavra": "dizia-lhes",
+            "timestamp": "30.9"
+        },
+        {
+            "palavra": "um",
+            "timestamp": "32.0"
+        },
+        {
+            "palavra": "peixe",
+            "timestamp": "32.4"
+        },
+        {
+            "palavra": "espada",
+            "timestamp": "32.9"
+        },
+        {
+            "palavra": "sua",
+            "timestamp": "34.2"
+        },
+        {
+            "palavra": "beleza",
+            "timestamp": "34.44"
+        },
+        {
+            "palavra": "é",
+            "timestamp": "34.96"
+        },
+        {
+            "palavra": "tão",
+            "timestamp": "35.0"
+        },
+        {
+            "palavra": "grande",
+            "timestamp": "35.26"
+        },
+        {
+            "palavra": "quanto",
+            "timestamp": "35.78"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "36.08"
+        },
+        {
+            "palavra": "delas",
+            "timestamp": "36.14"
+        },
+        {
+            "palavra": "embora",
+            "timestamp": "38.6"
+        },
+        {
+            "palavra": "estrelinha",
+            "timestamp": "39.24"
+        },
+        {
+            "palavra": "agradecesse",
+            "timestamp": "39.87"
+        },
+        {
+            "palavra": "0",
+            "timestamp": "39.9"
+        },
+        {
+            "palavra": "elogio",
+            "timestamp": "40.0"
+        },
+        {
+            "palavra": "continuava",
+            "timestamp": "41.72"
+        },
+        {
+            "palavra": "imersa",
+            "timestamp": "42.46"
+        },
+        {
+            "palavra": "em",
+            "timestamp": "43.06"
+        },
+        {
+            "palavra": "sua",
+            "timestamp": "43.18"
+        },
+        {
+            "palavra": "tristeza",
+            "timestamp": "43.42"
+        },
+        {
+            "palavra": "e",
+            "timestamp": "44.18"
+        },
+        {
+            "palavra": "na",
+            "timestamp": "44.3"
+        },
+        {
+            "palavra": "contemplação",
+            "timestamp": "44.6"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "45.78"
+        },
+        {
+            "palavra": "céu",
+            "timestamp": "45.96"
+        },
+        {
+            "palavra": "um",
+            "timestamp": "48.18"
+        },
+        {
+            "palavra": "dia",
+            "timestamp": "48.38"
+        },
+        {
+            "palavra": "estrelinha",
+            "timestamp": "48.92"
+        },
+        {
+            "palavra": "sonhou",
+            "timestamp": "49.52"
+        },
+        {
+            "palavra": "que",
+            "timestamp": "49.85"
+        },
+        {
+            "palavra": "era",
+            "timestamp": "50.0"
+        },
+        {
+            "palavra": "uma",
+            "timestamp": "50.33"
+        },
+        {
+            "palavra": "estrela",
+            "timestamp": "50.44"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "50.9"
+        },
+        {
+            "palavra": "universo",
+            "timestamp": "51.05"
+        },
+        {
+            "palavra": "via",
+            "timestamp": "52.3"
+        },
+        {
+            "palavra": "suas",
+            "timestamp": "52.6"
+        },
+        {
+            "palavra": "irmÃ£s",
+            "timestamp": "52.9"
+        },
+        {
+            "palavra": "longe",
+            "timestamp": "53.3"
+        },
+        {
+            "palavra": "muito",
+            "timestamp": "53.84"
+        },
+        {
+            "palavra": "longe",
+            "timestamp": "54.2"
+        },
+        {
+            "palavra": "e",
+            "timestamp": "55.12"
+        },
+        {
+            "palavra": "embora",
+            "timestamp": "55.24"
+        },
+        {
+            "palavra": "tentasse",
+            "timestamp": "55.7"
+        },
+        {
+            "palavra": "falar",
+            "timestamp": "56.24"
+        },
+        {
+            "palavra": "com",
+            "timestamp": "56.6"
+        },
+        {
+            "palavra": "elas",
+            "timestamp": "56.84"
+        },
+        {
+            "palavra": "sabia",
+            "timestamp": "57.62"
+        },
+        {
+            "palavra": "que",
+            "timestamp": "58.16"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "58.26"
+        },
+        {
+            "palavra": "distÃ¢ncia",
+            "timestamp": "58.31"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "58.93"
+        },
+        {
+            "palavra": "impedia",
+            "timestamp": "59.14"
+        },
+        {
+            "palavra": "por",
+            "timestamp": "60.26"
+        },
+        {
+            "palavra": "isso",
+            "timestamp": "60.44"
+        },
+        {
+            "palavra": "irradiavam",
+            "timestamp": "60.84"
+        },
+        {
+            "palavra": "um",
+            "timestamp": "61.0"
+        },
+        {
+            "palavra": "brilho",
+            "timestamp": "61.64"
+        },
+        {
+            "palavra": "intenso",
+            "timestamp": "62.0"
+        },
+        {
+            "palavra": "pois",
+            "timestamp": "63.18"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "63.38"
+        },
+        {
+            "palavra": "luz",
+            "timestamp": "63.92"
+        },
+        {
+            "palavra": "era",
+            "timestamp": "63.92"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "64.0"
+        },
+        {
+            "palavra": "Ãºnica",
+            "timestamp": "64.2"
+        },
+        {
+            "palavra": "maneira",
+            "timestamp": "64.69"
+        },
+        {
+            "palavra": "de",
+            "timestamp": "65.56"
+        },
+        {
+            "palavra": "se",
+            "timestamp": "65.69"
+        },
+        {
+            "palavra": "comunicar",
+            "timestamp": "65.88"
+        },
+        {
+            "palavra": "com",
+            "timestamp": "66.92"
+        },
+        {
+            "palavra": "suas",
+            "timestamp": "67.26"
+        },
+        {
+            "palavra": "irmÃ£s",
+            "timestamp": "67.72"
+        },
+        {
+            "palavra": "quando",
+            "timestamp": "69.69"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "70.0"
+        },
+        {
+            "palavra": "estrelinha",
+            "timestamp": "70.06"
+        },
+        {
+            "palavra": "despertou",
+            "timestamp": "70.76"
+        },
+        {
+            "palavra": "ela",
+            "timestamp": "72.16"
+        },
+        {
+            "palavra": "compreendeu",
+            "timestamp": "72.44"
+        },
+        {
+            "palavra": "o",
+            "timestamp": "73.42"
+        },
+        {
+            "palavra": "significado",
+            "timestamp": "73.58"
+        },
+        {
+            "palavra": "do",
+            "timestamp": "74.8"
+        },
+        {
+            "palavra": "seu",
+            "timestamp": "74.94"
+        },
+        {
+            "palavra": "sonho",
+            "timestamp": "75.24"
+        },
+        {
+            "palavra": "ninguÃ©m",
+            "timestamp": "78.1"
+        },
+        {
+            "palavra": "pode",
+            "timestamp": "78.37"
+        },
+        {
+            "palavra": "sentir-se",
+            "timestamp": "78.64"
+        },
+        {
+            "palavra": "feliz",
+            "timestamp": "79.26"
+        },
+        {
+            "palavra": "enquanto",
+            "timestamp": "80.24"
+        },
+        {
+            "palavra": "invejar",
+            "timestamp": "80.76"
+        },
+        {
+            "palavra": "as",
+            "timestamp": "81.4"
+        },
+        {
+            "palavra": "qualidades",
+            "timestamp": "81.6"
+        },
+        {
+            "palavra": "dos",
+            "timestamp": "82.26"
+        },
+        {
+            "palavra": "outros",
+            "timestamp": "82.52"
+        },
+        {
+            "palavra": "é",
+            "timestamp": "83.28"
+        },
+        {
+            "palavra": "melhor",
+            "timestamp": "83.38"
+        },
+        {
+            "palavra": "valorizar",
+            "timestamp": "83.74"
+        },
+        {
+            "palavra": "e",
+            "timestamp": "84.48"
+        },
+        {
+            "palavra": "desenvolver",
+            "timestamp": "84.54"
+        },
+        {
+            "palavra": "as",
+            "timestamp": "85.24"
+        },
+        {
+            "palavra": "nossas",
+            "timestamp": "85.38"
+        },
+        {
+            "palavra": "prÃ³prias",
+            "timestamp": "85.7"
+        },
+        {
+            "palavra": "qualidades",
+            "timestamp": "86.16"
+        },
+        {
+            "palavra": "sem",
+            "timestamp": "87.22"
+        },
+        {
+            "palavra": "querer",
+            "timestamp": "87.49"
+        },
+        {
+            "palavra": "imitar",
+            "timestamp": "88.28"
+        },
+        {
+            "palavra": "a",
+            "timestamp": "88.86"
+        },
+        {
+            "palavra": "ninguÃ©m",
+            "timestamp": "88.92"
+        },
+        {
+            "palavra": "diante",
+            "timestamp": "89.5"
+        },
+        {
+            "palavra": "de",
+            "timestamp": "89.92"
+        },
+        {
+            "palavra": "Deus",
+            "timestamp": "90.04"
+        },
+        {
+            "palavra": "somos",
+            "timestamp": "90.36"
+        },
+        {
+            "palavra": "todos",
+            "timestamp": "90.70"
+        },
+        {
+            "palavra": "especiais",
+            "timestamp": "90.96"
+        },
+        {
+            "palavra": "ele",
+            "timestamp": "92.24"
+        },
+        {
+            "palavra": "nos",
+            "timestamp": "92.94"
+        },
+        {
+            "palavra": "criou",
+            "timestamp": "93.2"
+        },
+        {
+            "palavra": "Ãºnicos",
+            "timestamp": "93.76"
+        },
+        {
+            "palavra": "com",
+            "timestamp": "94.70"
+        },
+        {
+            "palavra": "diferentes",
+            "timestamp": "94.94"
+        },
+        {
+            "palavra": "qualidades",
+            "timestamp": "96.12"
+        }
+    ],
+    "palavras": [
+        {
+            "palavra": "peixe",
+            "silabas": "pei-xe"
+        },
+        {
+            "palavra": "beleza",
+            "silabas": "be-le-za"
+        },
+        {
+            "palavra": "estrelinha",
+            "silabas": "es-tre-li-nha"
+        },
+        {
+            "palavra": "sempre",
+            "silabas": "sem-pre"
+        },
+        {
+            "palavra": "cortesias",
+            "silabas": "cor-te-si-as"
+        },
+        {
+            "palavra": "triste",
+            "silabas": "tris-te"
+        },
+        {
+            "palavra": "contemplava",
+            "silabas": "con-tem-pla-va"
+        },
+        {
+            "palavra": "ardentemente",
+            "silabas": "ar-den-te-men-te"
+        },
+        {
+            "palavra": "bela",
+            "silabas": "be-la"
+        },
+        {
+            "palavra": "espada",
+            "silabas": "es-pe-ci-ais"
+        },
+        {
+            "palavra": "elogio",
+            "silabas": "e-lo-gi-o"
+        },
+        {
+            "palavra": "sonhou",
+            "silabas": "so-nhou"
+        },
+        {
+            "palavra": "universo",
+            "silabas": "u-ni-ver-so"
+        },
+        {
+            "palavra": "comunicar",
+            "silabas": "co-mu-ni-car"
+        },
+        {
+            "palavra": "irradiava",
+            "silabas": "ir-ra-di-a-va"
+        },
+        {
+            "palavra": "qualidades",
+            "silabas": "qua-li-da-des"
+        },
+        {
+            "palavra": "imitar",
+            "silabas": "i-mi-tar"
+        },
+        {
+            "palavra": "especiais",
+            "silabas": "es-pe-ci-ais"
+        }
+    ]
+}
