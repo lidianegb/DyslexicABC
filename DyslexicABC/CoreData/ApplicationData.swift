@@ -16,7 +16,7 @@ class ApplicationData: ObservableObject {
     }()
     
     init(preview: Bool = false) {
-        container = NSPersistentContainer(name: "StoryDataModel")
+        container = NSPersistentContainer(name: "CoreDataModel")
         if preview {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "dev/null")
         }

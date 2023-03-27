@@ -13,7 +13,7 @@ struct DyslexicABCApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeViewTeste()
                 .environmentObject(appData)
                 .environment(\.managedObjectContext, appData.container.viewContext)
         }

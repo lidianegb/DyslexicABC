@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  HomeViewTeste.swift
 //  DyslexicABC
 //
 //  Created by Lidiane Gomes Barbosa on 31/01/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct HomeView: View {
+struct HomeViewTeste: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\StoryDataModel.text, order: .forward)], predicate: nil, animation: .default) private var storyData: FetchedResults<StoryDataModel>
     @Environment(\.managedObjectContext) var dbContext
     
@@ -80,9 +80,9 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct HomeViewTeste_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeViewTeste()
             .environment(\.managedObjectContext, ApplicationData.preview.container.viewContext)
     }
 }
