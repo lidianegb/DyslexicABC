@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeView: View {
+    @StateObject private var viewModel = HomeViewModel()
+    
     var body: some View {
-        Text("Hello, World!")
+        Button {
+             
+        } label: {
+            Text("Hello, World!")
+        }
     }
 }
 

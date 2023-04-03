@@ -1,5 +1,5 @@
 //
-//  StoryData.swift
+//  StoryCodableData.swift
 //  DyslexicABC
 //
 //  Created by Lidiane Gomes Barbosa on 31/01/23.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct StoryData: Codable, Identifiable {
+struct StoryCodableData: Codable, Identifiable {
     var id = UUID()
     var title: String
     var author: String
     var image: String
     var text: String
-    var words: [StoryDataWords]
-    var times: [StoryDataTimes]
+    var words: [StoryCodableDataWords]
+    var times: [StoryCodableDataTimes]
     
     enum CodingKeys: String, CodingKey {
         case title = "titulo"
@@ -26,10 +26,10 @@ struct StoryData: Codable, Identifiable {
     }
 }
 
-struct StoryDataWords: Codable, Identifiable {
+struct StoryCodableDataWords: Codable, Identifiable {
     var id = UUID()
     var word: String
-    var syllables: String
+    var syllables: [String]
     
     enum CodingKeys: String, CodingKey {
         case word = "palavra"
@@ -37,7 +37,7 @@ struct StoryDataWords: Codable, Identifiable {
     }
 }
 
-struct StoryDataTimes: Codable, Identifiable {
+struct StoryCodableDataTimes: Codable, Identifiable {
     var id = UUID()
     var word: String
     var timestamp: String

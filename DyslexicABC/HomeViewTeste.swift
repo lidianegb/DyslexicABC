@@ -56,11 +56,12 @@ struct HomeViewTeste: View {
             }
         }
     }
+    
     private func storeData() async {
         count += 1
         await dbContext.perform {
             let newData = StoryDataModel(context: dbContext)
-            newData.id = UUID()
+
             newData.text = "Era uma vez... \(count)"
             newData.title = "Uma historia"
             

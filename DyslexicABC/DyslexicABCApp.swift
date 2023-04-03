@@ -9,13 +9,10 @@ import SwiftUI
 
 @main
 struct DyslexicABCApp: App {
-    @StateObject var appData = ApplicationData()
-    
+
     var body: some Scene {
         WindowGroup {
-            HomeViewTeste()
-                .environmentObject(appData)
-                .environment(\.managedObjectContext, appData.container.viewContext)
+            HomeView()
         }
     }
 }

@@ -11,8 +11,8 @@ import CoreData
 public class StoryViewModel: ObservableObject {
     @Published var attributedText: AttributedString
     
-    private let storyData: StoryData?
-    private let jsonData: ReadJsonData<StoryData>
+    private let storyCodableData: StoryCodableData?
+    private let jsonData: ReadJsonData<StoryCodableData>
     private var player: PlayerManager
     private var textPlayerPositions = [String: Range<String.Index>]()
     private var formatter: DateComponentsFormatter {
@@ -24,10 +24,10 @@ public class StoryViewModel: ObservableObject {
     }
     
     init(resourceName: String, playerName: String) {
-        jsonData = ReadJsonData<StoryData>(resourceName: resourceName)
+        jsonData = ReadJsonData<StoryCodableData>(resourceName: resourceName)
         player =  PlayerManager(resourceName: playerName, resourceType: "mp3")
-        storyData = jsonData.data
-        attributedText = AttributedString(storyData?.text ?? "")
+        storyCodableData = jsonData.data
+        attributedText = AttributedString(storyCodableData?.text ?? "")
        
         populateTextPlayerPositions()
     }
@@ -35,30 +35,30 @@ public class StoryViewModel: ObservableObject {
     // MARK: PRIVATE
     
     private func generateRanges(with components: [String]) -> [Range<String.Index>]{
-        guard let storyData else { return [] }
+        guard let storyCodableData else { return [] }
 
         var ranges = [Range<String.Index>]()
-        var startIndex: String.Index = storyData.text.startIndex
+        var startIndex: String.Index = storyCodableData.text.startIndex
 
         for word in components {
-            let endIndex = storyData.text.index(startIndex, offsetBy: word.count)
+            let endIndex = storyCodableData.text.index(startIndex, offsetBy: word.count)
             let range = startIndex..<endIndex
             
             ranges.append(range)
-            if storyData.text.endIndex > endIndex {
-                startIndex = storyData.text.index(endIndex, offsetBy: 1)
+            if storyCodableData.text.endIndex > endIndex {
+                startIndex = storyCodableData.text.index(endIndex, offsetBy: 1)
             }
         }
       return ranges
     }
     
     private func populateTextPlayerPositions() {
-        guard let storyData else { return }
-        let textComponents = storyData.text.components(separatedBy: " ")
+        guard let storyCodableData else { return }
+        let textComponents = storyCodableData.text.components(separatedBy: " ")
         let ranges = generateRanges(with: textComponents)
         
-        if ranges.count == storyData.times.count {
-            for (index, time) in storyData.times.enumerated() {
+        if ranges.count == storyCodableData.times.count {
+            for (index, time) in storyCodableData.times.enumerated() {
                 textPlayerPositions[time.timestamp] = ranges[index]
             }
         }
@@ -81,10 +81,10 @@ public class StoryViewModel: ObservableObject {
     // MARK: PUBLIC
     
     public func updateText() {
-        guard let audioPlayer = player.audioPlayer, let storyData else { return }
+        guard let audioPlayer = player.audioPlayer, let storyCodableData else { return }
         let currentTime = stringFromTimeInterval(interval: audioPlayer.currentTime)
         if let range = textPlayerPositions[currentTime] {
-            self.attributedText = updateAttributedText(range, text: storyData.text)
+            self.attributedText = updateAttributedText(range, text: storyCodableData.text)
         }
     }
     
@@ -104,7 +104,7 @@ public class StoryViewModel: ObservableObject {
     }
     
     public func stopAudioPlayer() {
-        attributedText = AttributedString(storyData?.text ?? "")
+        attributedText = AttributedString(storyCodableData?.text ?? "")
         player.stop()
     }
     

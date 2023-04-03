@@ -756,75 +756,75 @@
     "palavras": [
         {
             "palavra": "peixe",
-            "silabas": "pei-xe"
+            "silabas": ["pei", "xe"]
         },
         {
             "palavra": "beleza",
-            "silabas": "be-le-za"
+            "silabas": ["be", "le", "za"]
         },
         {
             "palavra": "estrelinha",
-            "silabas": "es-tre-li-nha"
+            "silabas": ["es", "tre", "li", "nha"]
         },
         {
             "palavra": "sempre",
-            "silabas": "sem-pre"
+            "silabas": ["sem", "pre"]
         },
         {
             "palavra": "cortesias",
-            "silabas": "cor-te-si-as"
+            "silabas": ["cor", "te", "si", "as"]
         },
         {
             "palavra": "triste",
-            "silabas": "tris-te"
+            "silabas": ["tris", "te"]
         },
         {
             "palavra": "contemplava",
-            "silabas": "con-tem-pla-va"
+            "silabas": ["con","tem", "pla", "va"]
         },
         {
             "palavra": "ardentemente",
-            "silabas": "ar-den-te-men-te"
+            "silabas": ["ar", "den", "te", "men", "te"]
         },
         {
             "palavra": "bela",
-            "silabas": "be-la"
+            "silabas": ["be", "la"]
         },
         {
             "palavra": "espada",
-            "silabas": "es-pe-ci-ais"
+            "silabas": ["es", "pe", "ci", "ais"]
         },
         {
             "palavra": "elogio",
-            "silabas": "e-lo-gi-o"
+            "silabas": ["e", "lo", "gi", "o"]
         },
         {
             "palavra": "sonhou",
-            "silabas": "so-nhou"
+            "silabas": ["so", "nhou"]
         },
         {
             "palavra": "universo",
-            "silabas": "u-ni-ver-so"
+            "silabas": ["u", "ni", "ver", "so"]
         },
         {
             "palavra": "comunicar",
-            "silabas": "co-mu-ni-car"
+            "silabas": ["co", "mu", "ni", "car"]
         },
         {
             "palavra": "irradiava",
-            "silabas": "ir-ra-di-a-va"
+            "silabas": ["ir", "ra", "di", "a", "va"]
         },
         {
             "palavra": "qualidades",
-            "silabas": "qua-li-da-des"
+            "silabas": ["qua", "li", "da", "des"]
         },
         {
             "palavra": "imitar",
-            "silabas": "i-mi-tar"
+            "silabas": ["i", "mi", "tar"]
         },
         {
             "palavra": "especiais",
-            "silabas": "es-pe-ci-ais"
+            "silabas": ["es", "pe", "ci", "ais"]
         }
     ]
 }

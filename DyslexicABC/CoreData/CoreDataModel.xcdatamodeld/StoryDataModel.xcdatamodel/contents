@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HomeDataModel" representedClassName="HomeDataModel" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="listHistory" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataModel" inverseName="home" inverseEntity="StoryDataModel"/>
+    </entity>
     <entity name="StoryDataModel" representedClassName="StoryDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="String"/>
-        <attribute name="text" attributeType="String"/>
-        <attribute name="title" attributeType="String"/>
-        <relationship name="times" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataTimesModel" inverseName="dataModel" inverseEntity="StoryDataTimesModel"/>
-        <relationship name="words" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataWordsModel" inverseName="dataModel" inverseEntity="StoryDataWordsModel"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="home" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HomeDataModel" inverseName="listHistory" inverseEntity="HomeDataModel"/>
+        <relationship name="times" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataTimesModel" inverseName="dataModel" inverseEntity="StoryDataTimesModel"/>
+        <relationship name="words" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataWordsModel" inverseName="dataModel" inverseEntity="StoryDataWordsModel"/>
     </entity>
     <entity name="StoryDataTimesModel" representedClassName="StoryDataTimesModel" syncable="YES" codeGenerationType="class">
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="timestamp" attributeType="String"/>
-        <attribute name="word" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="String"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
         <relationship name="dataModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryDataModel" inverseName="times" inverseEntity="StoryDataModel"/>
     </entity>
     <entity name="StoryDataWordsModel" representedClassName="StoryDataWordsModel" syncable="YES" codeGenerationType="class">
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="syllables" attributeType="String"/>
-        <attribute name="word" attributeType="String"/>
+        <attribute name="syllables" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="[String]"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
         <relationship name="dataModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryDataModel" inverseName="words" inverseEntity="StoryDataModel"/>
     </entity>
+    <configuration name="Cloud" usedWithCloudKit="YES"/>
+    <configuration name="Local"/>
 </model>

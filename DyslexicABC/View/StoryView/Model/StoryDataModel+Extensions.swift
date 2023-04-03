@@ -21,7 +21,7 @@ extension StoryDataModel {
         return text ?? "Undefined"
     }
     
-    var showImage: Image {
-        return Image(image ?? "")
+    var showImage: UIImage? {
+       return UIImage(named: image ?? "")
     }
 }
