@@ -13,6 +13,6 @@ extension HomeDataModel {
     }
     
     var showListHistory: [StoryDataModel] {
-       return []
+        return listHistory?.allObjects as? [StoryDataModel] ?? []
     }
 }

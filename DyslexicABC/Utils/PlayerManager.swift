@@ -63,6 +63,6 @@ final class PlayerManager: ObservableObject {
     public func stop() {
         state = .stoped
         audioPlayer?.stop()
-        audioPlayer?.currentTime = 0
+        audioPlayer?.currentTime = .zero
     }
 }

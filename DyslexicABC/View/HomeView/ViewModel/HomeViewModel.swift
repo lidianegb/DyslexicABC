@@ -13,12 +13,15 @@ public class HomeViewModel: ObservableObject {
     @Published var homeData: HomeDataModel?
     var dbContext: NSManagedObjectContext = ApplicationData().container.viewContext
    
-    init() {
+    public init() {
         homeData = fetchData()
+    
         if homeData == nil {
             readDataFromFiles()
         }
     }
+    
+    // MARK: PRIVATE
     
     private func readDataFromFiles() {
         let codableData = getHomeData()

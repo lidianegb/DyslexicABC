@@ -10,10 +10,17 @@ import UIKit
 import AVFoundation
 
 final class Speaker: NSObject, ObservableObject {
+    private enum LocalMetrics {
+        static let rate: Float = 0.4
+        static let pitchMultiplier: Float = 0.8
+        static let postUtteranceDelay: Double = 0.2
+        static let volume: Float = 0.8
+    }
+    
     @Published var state: State = .inactive
     @Published var label = AttributedString()
     var highlightedTextColor: Color = .red
-    var rate: Float = 0.4
+    var rate: Float = LocalMetrics.rate
     var range: Range<String.Index>?
     
     private let synth = AVSpeechSynthesizer()
@@ -22,7 +29,7 @@ final class Speaker: NSObject, ObservableObject {
         case inactive, speaking, paused
     }
     
-    convenience init(text: String, highlightedTextColor: Color = .red, rate: Float = 0.4) {
+    convenience init(text: String, highlightedTextColor: Color = .red, rate: Float = LocalMetrics.rate) {
         self.init()
         label = AttributedString(text)
         self.highlightedTextColor = highlightedTextColor
@@ -32,9 +39,9 @@ final class Speaker: NSObject, ObservableObject {
     
     func speak() {
         let utterance = AVSpeechUtterance(string: label.description)
-        utterance.pitchMultiplier = 0.8
-        utterance.postUtteranceDelay = 0.2
-        utterance.volume = 0.8
+        utterance.pitchMultiplier = LocalMetrics.pitchMultiplier
+        utterance.postUtteranceDelay = LocalMetrics.postUtteranceDelay
+        utterance.volume = LocalMetrics.volume
         utterance.voice = AVSpeechSynthesisVoice(language: "pt-BR")
         utterance.rate = rate
         synth.speak(utterance)

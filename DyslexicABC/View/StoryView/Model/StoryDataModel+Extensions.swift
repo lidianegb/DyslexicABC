@@ -21,7 +21,15 @@ extension StoryDataModel {
         return text ?? "Undefined"
     }
     
-    var showImage: UIImage? {
-       return UIImage(named: image ?? "")
+    var showImage: Image {
+       return Image(image ?? "")
+    }
+    
+    var showTimes: [StoryDataTimesModel] {
+        return times?.allObjects as? [StoryDataTimesModel]  ?? []
+    }
+    
+    var showWords: [StoryDataWordsModel] {
+        return words?.allObjects as? [StoryDataWordsModel] ?? []
     }
 }
