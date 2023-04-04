@@ -10,10 +10,17 @@ import AVFoundation
 import Combine
 
 struct StoryView: View {
-    @StateObject var viewModel = StoryViewModel(resourceName: "a-estrelinha-do-mar", playerName: "a-estrelinha-do-mar-historinha-infantil-historia-curta")
+    private var storyData: StoryDataModel
+    
+    @StateObject var viewModel: StoryViewModel = StoryViewModel(playerName: "a-estrelinha-do-mar")
+    
     @State var timer = Timer
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
+    
+    init(storyData: StoryDataModel) {
+        self.storyData = storyData
+    }
     
     var body: some View {
         ScrollView {
@@ -45,12 +52,15 @@ struct StoryView: View {
         .onReceive(timer) { _ in
             viewModel.updateText()
         }
+        .onAppear {
+            viewModel.storyData = storyData
+        }
     }
   
 }
 
 struct StoryView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryView()
+        StoryView(storyData: StoryDataModel())
     }
 }

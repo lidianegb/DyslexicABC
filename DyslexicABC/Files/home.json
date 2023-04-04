@@ -2,6 +2,7 @@
     "titulo": "DislexicABC",
     "historias": [
         {
+            "imagem": "A-ESTRELINHA-DO-MAR",
             "arquivo": "a-estrelinha-do-mar",
             "audio": "a-estrelinha-do-mar"
         }

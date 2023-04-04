@@ -26,10 +26,10 @@ extension StoryDataModel {
     }
     
     var showTimes: [StoryDataTimesModel] {
-        return times?.allObjects as? [StoryDataTimesModel]  ?? []
+        return times?.array as? [StoryDataTimesModel]  ?? []
     }
     
     var showWords: [StoryDataWordsModel] {
-        return words?.allObjects as? [StoryDataWordsModel] ?? []
+        return words?.array as? [StoryDataWordsModel] ?? []
     }
 }

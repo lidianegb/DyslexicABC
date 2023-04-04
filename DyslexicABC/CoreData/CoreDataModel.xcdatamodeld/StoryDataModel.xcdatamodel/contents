@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HomeDataItem" representedClassName="HomeDataItem" syncable="YES" codeGenerationType="class">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="file" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="HomeDataModel" representedClassName="HomeDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="listHistory" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataModel" inverseName="home" inverseEntity="StoryDataModel"/>
+        <relationship name="listHistory" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="StoryDataModel" inverseName="home" inverseEntity="StoryDataModel"/>
     </entity>
     <entity name="StoryDataModel" representedClassName="StoryDataModel" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="home" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HomeDataModel" inverseName="listHistory" inverseEntity="HomeDataModel"/>
-        <relationship name="times" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataTimesModel" inverseName="dataModel" inverseEntity="StoryDataTimesModel"/>
-        <relationship name="words" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoryDataWordsModel" inverseName="dataModel" inverseEntity="StoryDataWordsModel"/>
+        <relationship name="times" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="StoryDataTimesModel" inverseName="dataModel" inverseEntity="StoryDataTimesModel"/>
+        <relationship name="words" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="StoryDataWordsModel" inverseName="dataModel" inverseEntity="StoryDataWordsModel"/>
     </entity>
     <entity name="StoryDataTimesModel" representedClassName="StoryDataTimesModel" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="String"/>

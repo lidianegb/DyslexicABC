@@ -52,7 +52,7 @@ public class HomeViewModel: ObservableObject {
         let newData = HomeDataModel(context: self.dbContext)
         newData.title = data.title
         let filesNames: [String] = data.listHistory.map { $0.file }
-        newData.listHistory = NSSet(array: getListHistoryData(filesNames))
+        newData.listHistory = NSOrderedSet(array: getListHistoryData(filesNames))
         
         return newData
     }
@@ -85,7 +85,7 @@ public class HomeViewModel: ObservableObject {
             newTime.dataModel = newData
             storyTimes.append(newTime)
         }
-        newData.times = NSSet(array: storyTimes)
+        newData.times = NSOrderedSet(array: storyTimes)
         
         var storyWords: [StoryDataWordsModel] = []
         data.words.forEach { word in
@@ -93,7 +93,7 @@ public class HomeViewModel: ObservableObject {
             newWord.dataModel = newData
             storyWords.append(newWord)
         }
-        newData.words = NSSet(array: storyWords)
+        newData.words = NSOrderedSet(array: storyWords)
         
         return newData
     }

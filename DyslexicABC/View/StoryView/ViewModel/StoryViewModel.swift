@@ -9,12 +9,28 @@ import SwiftUI
 import CoreData
 
 public class StoryViewModel: ObservableObject {
+    
+    private enum LocalMetrics {
+        static let hundred: CGFloat = 100
+        static let offset = 1
+    }
+    
+    private enum Constants {
+        static let fileExtension = "mp3"
+    }
+    
     @Published var attributedText: AttributedString
     
-    private let storyCodableData: StoryCodableData?
-    private let jsonData: ReadJsonData<StoryCodableData>
+    var storyData: StoryDataModel? {
+        didSet {
+            attributedText = AttributedString(storyData?.showText ?? "")
+            populateTextPlayerPositions()
+        }
+    }
+    
     private var player: PlayerManager
     private var textPlayerPositions = [String: Range<String.Index>]()
+    
     private var formatter: DateComponentsFormatter {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.minute, .second]
@@ -23,50 +39,45 @@ public class StoryViewModel: ObservableObject {
         return formatter
     }
     
-    init(resourceName: String, playerName: String) {
-        jsonData = ReadJsonData<StoryCodableData>(resourceName: resourceName)
-        player =  PlayerManager(resourceName: playerName, resourceType: "mp3")
-        storyCodableData = jsonData.data
-        attributedText = AttributedString(storyCodableData?.text ?? "")
-       
-        populateTextPlayerPositions()
+    init(playerName: String) {
+        player =  PlayerManager(resourceName: playerName, resourceType: Constants.fileExtension)
+        attributedText = AttributedString(storyData?.showText ?? "")
     }
     
     // MARK: PRIVATE
     
     private func generateRanges(with components: [String]) -> [Range<String.Index>]{
-        guard let storyCodableData else { return [] }
-
+        guard let storyData else { return [] }
         var ranges = [Range<String.Index>]()
-        var startIndex: String.Index = storyCodableData.text.startIndex
+        var startIndex: String.Index = storyData.showText.startIndex
 
         for word in components {
-            let endIndex = storyCodableData.text.index(startIndex, offsetBy: word.count)
+            let endIndex = storyData.showText.index(startIndex, offsetBy: word.count)
             let range = startIndex..<endIndex
             
             ranges.append(range)
-            if storyCodableData.text.endIndex > endIndex {
-                startIndex = storyCodableData.text.index(endIndex, offsetBy: 1)
+            if storyData.showText.endIndex > endIndex {
+                startIndex = storyData.showText.index(endIndex, offsetBy: LocalMetrics.offset)
             }
         }
       return ranges
     }
     
     private func populateTextPlayerPositions() {
-        guard let storyCodableData else { return }
-        let textComponents = storyCodableData.text.components(separatedBy: " ")
+        guard let storyData else { return }
+        let textComponents = storyData.showText.components(separatedBy: " ")
         let ranges = generateRanges(with: textComponents)
         
-        if ranges.count == storyCodableData.times.count {
-            for (index, time) in storyCodableData.times.enumerated() {
-                textPlayerPositions[time.timestamp] = ranges[index]
+        if ranges.count == storyData.showTimes.count {
+            for (index, time) in storyData.showTimes.enumerated() {
+                textPlayerPositions[time.timestamp ?? ""] = ranges[index]
             }
         }
     }
     
     private func stringFromTimeInterval(interval: TimeInterval) -> String {
         let ti = CGFloat(interval)
-        let doubleValue = Double(round(100 * ti) / 100)
+        let doubleValue = Double(round(LocalMetrics.hundred * ti) / LocalMetrics.hundred)
         return String(doubleValue)
     }
     
@@ -81,10 +92,10 @@ public class StoryViewModel: ObservableObject {
     // MARK: PUBLIC
     
     public func updateText() {
-        guard let audioPlayer = player.audioPlayer, let storyCodableData else { return }
+        guard let storyData, let audioPlayer = player.audioPlayer else { return }
         let currentTime = stringFromTimeInterval(interval: audioPlayer.currentTime)
         if let range = textPlayerPositions[currentTime] {
-            self.attributedText = updateAttributedText(range, text: storyCodableData.text)
+            self.attributedText = updateAttributedText(range, text: storyData.showText)
         }
     }
     
@@ -104,8 +115,8 @@ public class StoryViewModel: ObservableObject {
     }
     
     public func stopAudioPlayer() {
-        attributedText = AttributedString(storyCodableData?.text ?? "")
+        guard let storyData else { return }
+        attributedText = AttributedString(storyData.showText)
         player.stop()
     }
-    
 }

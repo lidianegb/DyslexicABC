@@ -20,9 +20,11 @@ public struct HomeCodableData: Codable {
 public struct HomeListHistory: Codable {
     public let file: String
     public let audio: String
+    public let image: String
     
     private enum CodingKeys: String, CodingKey {
         case file = "arquivo"
+        case image = "imagem"
         case audio
     }
 }
