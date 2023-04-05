@@ -9,5 +9,5 @@ import Foundation
 
 enum Router: Hashable {
     case home
-    case history(StoryDataModel)
+    case history(HomeItem)
 }

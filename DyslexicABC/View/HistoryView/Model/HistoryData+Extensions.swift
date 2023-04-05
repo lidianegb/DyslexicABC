@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension StoryDataModel {
+extension HistoryData {
     var showTitle: String {
         return title ?? "Undefined"
     }
@@ -25,11 +25,11 @@ extension StoryDataModel {
        return Image(image ?? "")
     }
     
-    var showTimes: [StoryDataTimesModel] {
-        return times?.array as? [StoryDataTimesModel]  ?? []
+    var showTimes: [HistoryTime] {
+        return times?.array as? [HistoryTime]  ?? []
     }
     
-    var showWords: [StoryDataWordsModel] {
-        return words?.array as? [StoryDataWordsModel] ?? []
+    var showWords: [HistoryWord] {
+        return words?.array as? [HistoryWord] ?? []
     }
 }

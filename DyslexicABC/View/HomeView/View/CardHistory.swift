@@ -15,7 +15,7 @@ struct CardHistory: View {
         static let lineWidth = 1.5
     }
    
-    var entity: StoryDataModel
+    var entity: HomeItem
     var totalColumns: CGFloat
     
     var body: some View {

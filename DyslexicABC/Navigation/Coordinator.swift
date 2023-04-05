@@ -22,7 +22,7 @@ class Coordinator: ObservableObject {
         path.removeLast()
     }
     
-    func goToHistoryScreen(_ data: StoryDataModel) {
+    func goToHistoryScreen(_ data: HomeItem) {
         path.append(Router.history(data))
     }
     

@@ -9,7 +9,7 @@ import Foundation
 
 public struct HomeCodableData: Codable {
     public let title: String
-    public let listHistory: [HomeListHistory]
+    public let listHistory: [HomeCodableItem]
     
     private enum CodingKeys: String, CodingKey {
         case title = "titulo"
@@ -17,14 +17,16 @@ public struct HomeCodableData: Codable {
     }
 }
 
-public struct HomeListHistory: Codable {
+public struct HomeCodableItem: Codable {
     public let file: String
     public let audio: String
     public let image: String
+    public let title: String
     
     private enum CodingKeys: String, CodingKey {
         case file = "arquivo"
         case image = "imagem"
+        case title = "titulo"
         case audio
     }
 }

@@ -1,5 +1,5 @@
 //
-//  StoryView.swift
+//  HistoryView.swift
 //  DyslexicABC
 //
 //  Created by Lidiane Gomes Barbosa on 26/12/22.
@@ -9,17 +9,17 @@ import SwiftUI
 import AVFoundation
 import Combine
 
-struct StoryView: View {
-    private var storyData: StoryDataModel
+struct HistoryView: View {
+    private var dataInfo: HomeItem
     
-    @StateObject var viewModel: StoryViewModel = StoryViewModel(playerName: "a-estrelinha-do-mar")
+    @StateObject var viewModel: HistoryViewModel = HistoryViewModel()
     
     @State var timer = Timer
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
     
-    init(storyData: StoryDataModel) {
-        self.storyData = storyData
+    init(_ dataInfo: HomeItem) {
+        self.dataInfo = dataInfo
     }
     
     var body: some View {
@@ -53,14 +53,14 @@ struct StoryView: View {
             viewModel.updateText()
         }
         .onAppear {
-            viewModel.storyData = storyData
+            viewModel.setupData(dataInfo)
         }
     }
   
 }
 
-struct StoryView_Previews: PreviewProvider {
+struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryView(storyData: StoryDataModel())
+        HistoryView(HomeItem())
     }
 }

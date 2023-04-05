@@ -15,7 +15,7 @@ class ViewFactory {
         case .home:
             HomeView()
         case let .history(data):
-            StoryView(storyData: data)
+            HistoryView(data)
         }
     }
 }

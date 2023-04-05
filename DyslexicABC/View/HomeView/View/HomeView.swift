@@ -30,7 +30,7 @@ struct HomeView: View {
                 }
             }
             .padding(Metrics.medium)
-            .navigationTitle(viewModel.homeData?.showTitle ?? "")
+            .navigationTitle(viewModel.homeData?.title ?? "")
             .font(.openDyslexic)
         }
     }

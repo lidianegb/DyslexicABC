@@ -9,21 +9,24 @@ import Foundation
 import CoreData
 
 class ApplicationData: ObservableObject {
-    let container: NSPersistentContainer
-    
-    static var preview: ApplicationData = {
-        ApplicationData(preview: true)
-    }()
-    
-    init(preview: Bool = false) {
-        container = NSPersistentContainer(name: "CoreDataModel")
-        if preview {
-            container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "dev/null")
-        }
+    static let container: NSPersistentContainer = {
+       let container = NSPersistentContainer(name: "CoreDataModel")
+       
         
         container.loadPersistentStores { (storeDescription, error) in
             if let nserror = error as? NSError {
                 fatalError("unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+        return container
+    }()
+    
+    static func saveContext() async {
+        await container.viewContext.perform {
+            do {
+                try self.container.viewContext.save()
+            } catch {
+                // TODO: SHOW ERROR
             }
         }
     }

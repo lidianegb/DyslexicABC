@@ -1,18 +1,33 @@
 //
-//  HomeDataModel+Extensions.swift
+//  HomeData+Extensions.swift
 //  DyslexicABC
 //
 //  Created by Lidiane Gomes Barbosa on 03/04/23.
 //
 
 import Foundation
+import SwiftUI
 
-extension HomeDataModel {
+extension HomeData {
+    var showListHistory: [HomeItem] {
+        return listHistory?.array as? [HomeItem] ?? []
+    }
+}
+
+extension HomeItem {
     var showTitle: String {
         return title ?? "Undefined"
     }
     
-    var showListHistory: [StoryDataModel] {
-        return listHistory?.array as? [StoryDataModel] ?? []
+    var showFile: String {
+        return file ?? "Undefined"
+    }
+    
+    var showAudio: String {
+        return audio ?? "Undefined"
+    }
+    
+    var showImage: Image {
+        return Image(image ?? "")
     }
 }
