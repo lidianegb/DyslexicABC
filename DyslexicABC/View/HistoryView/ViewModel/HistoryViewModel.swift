@@ -48,7 +48,6 @@ public class HistoryViewModel: ObservableObject {
     // MARK: PRIVATE
     
     private func fetchData(_ id: String) -> HistoryData? {
-        // TODO: FETCH FROM ID
         let predicate = NSPredicate(format: "id == %@", id)
         let fetchRequest = NSFetchRequest<HistoryData>(entityName: "HistoryData")
         fetchRequest.predicate = predicate

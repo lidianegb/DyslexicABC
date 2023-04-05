@@ -12,7 +12,6 @@ class ApplicationData: ObservableObject {
     static let container: NSPersistentContainer = {
        let container = NSPersistentContainer(name: "CoreDataModel")
        
-        
         container.loadPersistentStores { (storeDescription, error) in
             if let nserror = error as? NSError {
                 fatalError("unresolved error \(nserror), \(nserror.userInfo)")
@@ -28,6 +27,17 @@ class ApplicationData: ObservableObject {
             } catch {
                 // TODO: SHOW ERROR
             }
+        }
+    }
+    
+    static func clearModelData(_ data: NSManagedObject) async {
+        await container.viewContext.perform {
+            self.container.viewContext.delete(data)
+        }
+        do {
+            try container.viewContext.save()
+        } catch {
+            print("error deleting objects")
         }
     }
 }
