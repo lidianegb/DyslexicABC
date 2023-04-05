@@ -16,7 +16,7 @@ public class HomeViewModel: ObservableObject {
    
     public init() {
         homeData = fetchData()
-    
+       
         if homeData == nil {
             readDataFromFiles()
         }
@@ -24,18 +24,23 @@ public class HomeViewModel: ObservableObject {
     
     // MARK: PRIVATE
     
+    private func fetchData() -> HomeData? {
+        let request: NSFetchRequest<HomeData> = HomeData.fetchRequest()
+        let list = try? self.dbContext.fetch(request)
+        return list?.first
+    }
+    
     private func readDataFromFiles() {
-        let codableData = getHomeData()
+        let codableData = getHomeDataFromFile()
         homeData = createHomeDataModel(codableData)
+
         Task(priority: .high) {
             await ApplicationData.saveContext()
         }
     }
     
-    private func fetchData() -> HomeData? {
-        let request: NSFetchRequest<HomeData> = HomeData.fetchRequest()
-        let list = try? self.dbContext.fetch(request)
-        return list?.first
+    private func getHomeDataFromFile() -> HomeCodableData? {
+        return ReadJsonData<HomeCodableData>(resourceName: "home").data
     }
     
     private func createHomeDataModel(_ data: HomeCodableData?) -> HomeData? {
@@ -47,10 +52,7 @@ public class HomeViewModel: ObservableObject {
         return newData
     }
     
-    private func getHomeData() -> HomeCodableData? {
-        return ReadJsonData<HomeCodableData>(resourceName: "home").data
-    }
-    
+  
     private func getListHomeItemData(_ list: [HomeCodableItem]) -> [HomeItem] {
         var historyList: [HomeItem] = []
         list.forEach { data in
@@ -68,17 +70,5 @@ public class HomeViewModel: ObservableObject {
         newData.file = data.file
         newData.title = data.title
         return newData
-    }
-    
-    private func clearAllData() async {
-        guard let homeData else { return }
-        await dbContext.perform {
-            self.dbContext.delete(homeData)
-        }
-        do {
-            try dbContext.save()
-        } catch {
-            print("error deleting objects")
-        }
     }
 }
