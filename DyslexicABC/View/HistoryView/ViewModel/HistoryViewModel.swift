@@ -11,6 +11,7 @@ import CoreData
 public class HistoryViewModel: ObservableObject {
     @Published var historyData: HistoryData?
     @Published var attributedText = AttributedString()
+    @Published var isLoadingData: Bool = true
 
     private enum LocalMetrics {
         static let hundred: CGFloat = 100
@@ -43,6 +44,7 @@ public class HistoryViewModel: ObservableObject {
         player =  PlayerManager(resourceName: homeItem.showAudio, resourceType: Constants.fileExtension)
         attributedText = AttributedString(historyData?.showText ?? "")
         populateTextPlayerPositions()
+        isLoadingData = false
     }
     
     // MARK: PRIVATE

@@ -18,17 +18,20 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                LazyVGrid(columns: columns) {
-                    ForEach(viewModel.homeData?.showListHistory ?? [], id: \.id) { history in
-                        CardHistory(entity: history, totalColumns: CGFloat(columns.count)
-                        )
-                        .onTapGesture {
-                            Coordinator.shared.goToHistoryScreen(history)
+            ZStack {
+                VStack {
+                    LazyVGrid(columns: columns) {
+                        ForEach(viewModel.homeData?.showListHistory ?? [], id: \.id) { history in
+                            CardHistory(entity: history, totalColumns: CGFloat(columns.count)
+                            )
+                            .onTapGesture {
+                                Coordinator.shared.goToHistoryScreen(history)
+                            }
                         }
                     }
                 }
             }
+            
             .padding(Metrics.medium)
             .navigationTitle(viewModel.homeData?.title ?? "")
             .font(.openDyslexic)

@@ -11,9 +11,8 @@ import Combine
 
 struct HistoryView: View {
     private var dataInfo: HomeItem
-    
     @StateObject var viewModel: HistoryViewModel = HistoryViewModel()
-    
+   
     @State var timer = Timer
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
@@ -24,30 +23,22 @@ struct HistoryView: View {
     
     var body: some View {
         ScrollView {
-            VStack() {
-                Text(viewModel.attributedText)
-                Button {
-                    timer = Timer
-                        .publish(every: 0.01, on: .main, in: .common)
-                        .autoconnect()
-                    viewModel.startAudioPlayer()
-                } label: {
-                    Text("Start")
-                        .font(.custom("open-dyslexic", size: 50))
+            ZStack {
+                VStack {
+                    Text(dataInfo.showTitle)
+                        .font(.custom(FontName.openDyslexic.rawValue, size: Metrics.medium))
+                        .padding([.bottom])
+                    Text(viewModel.attributedText)
+                        .font(.openDyslexic)
                 }
-                Button {
-                    viewModel.pauseAudioPlayer()
-                } label: {
-                    Text("Pause")
-                }
-                
-                Button {
-                    timer.upstream.connect().cancel()
-                    viewModel.stopAudioPlayer()
-                } label: {
-                    Text("Stop")
-                }
-            }.padding()
+                .opacity(viewModel.isLoadingData ? 0 : 1)
+        
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .opacity(viewModel.isLoadingData ? 1 : .zero)
+            }
+           
+            .padding()
         }
         .onReceive(timer) { _ in
             viewModel.updateText()
