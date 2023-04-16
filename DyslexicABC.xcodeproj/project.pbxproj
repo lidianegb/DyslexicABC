@@ -40,6 +40,7 @@
 		6BAC749C2989DF8E003039EE /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC749B2989DF8E003039EE /* CustomFont.swift */; };
 		6BAC74A22989EED4003039EE /* Silkscreen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC74A12989EED4003039EE /* Silkscreen-Regular.ttf */; };
 		6BAC74A42989EF74003039EE /* open-dyslexic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC74A32989EF74003039EE /* open-dyslexic.ttf */; };
+		6BD3AA2229EC06BD00E5080A /* NotificationCenterEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3AA2129EC06BD00E5080A /* NotificationCenterEvents.swift */; };
 		6BE42F4E29DE4500004D446B /* FontStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE42F4D29DE4500004D446B /* FontStepper.swift */; };
 		6BE42F5029DE4747004D446B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE42F4F29DE4747004D446B /* PlayerView.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		6BAC749B2989DF8E003039EE /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		6BAC74A12989EED4003039EE /* Silkscreen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Silkscreen-Regular.ttf"; sourceTree = "<group>"; };
 		6BAC74A32989EF74003039EE /* open-dyslexic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "open-dyslexic.ttf"; sourceTree = "<group>"; };
+		6BD3AA2129EC06BD00E5080A /* NotificationCenterEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterEvents.swift; sourceTree = "<group>"; };
 		6BE42F4D29DE4500004D446B /* FontStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStepper.swift; sourceTree = "<group>"; };
 		6BE42F4F29DE4747004D446B /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +273,7 @@
 				6BAC749B2989DF8E003039EE /* CustomFont.swift */,
 				6B7DE12D2991BB2300F5EFB7 /* PlayerManager.swift */,
 				6B7B728029DCD10C003A06DF /* Metrics.swift */,
+				6BD3AA2129EC06BD00E5080A /* NotificationCenterEvents.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				6BAC747D2989AB86003039EE /* TextView.swift in Sources */,
 				6B782D7A29D3A36600666A02 /* ApplicationCloudKitData.swift in Sources */,
 				6BA2E2D129DB944500E5F16B /* Router.swift in Sources */,
+				6BD3AA2229EC06BD00E5080A /* NotificationCenterEvents.swift in Sources */,
 				6B326103295A65D20067C9E4 /* HistoryView.swift in Sources */,
 				6B53865629CE1FCF0050C441 /* CoreDataModel.xcdatamodeld in Sources */,
 				6BAC74892989B15A003039EE /* Speaker.swift in Sources */,

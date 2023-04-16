@@ -169,15 +169,7 @@ public class HistoryViewModel: ObservableObject {
     }
     
     public func pauseAudioPlayer() {
-        switch player?.state {
-        case .stoped:
-            startAudioPlayer()
-        case .paused:
-            player?.play()
-        case .playing:
-            player?.pause()
-        default: break
-        }
+        player?.pause()
     }
     
     public func stopAudioPlayer() {
